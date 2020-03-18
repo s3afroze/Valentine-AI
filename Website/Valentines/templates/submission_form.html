@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine-AI SMS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/heart.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/data.css') }}">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+  <canvas id="heart"></canvas>
+<script  src="{{ url_for('static', filename='js/heart.js') }}"></script>
+
+<br>
+<br>
+<form action="{{ url_for('NLP')}}" method="POST" id="msform">
+  <!-- progressbar -->
+  <ul id="progressbar">
+    <li class="active">Information Submission</li>
+    <li>Valentine AI</li>
+    <li>AI ships you</li>
+  </ul>
+  <!-- fieldsets -->
+  <fieldset>
+    <h2 class="fs-title">Submit a number to send an AI generated quote</h2>
+    <br>
+    <input type="text" name="from" placeholder="From: Admirer" />
+    <input type="text" name="to" placeholder="To: My Crush" />
+    <input type="hidden" name="quote" value="{{ quotes_dump }}">
+    <input type="text" name="number" placeholder="Number: 6473947476" required>
+    <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
+  <fieldset>
+    <br>
+    <br>
+    <h3>Quote selected:</h3>
+    <br>
+    <h3>{{ quote }}</h3>
+    <br>
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
+  <fieldset>
+    <h2 class="fs-title">AI ships this couple?</h2>
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="submit" name="submit" class="submit action-button" value="Send!" />
+  </fieldset>
+</form>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+<script  src="{{ url_for('static', filename='js/data.js') }}"></script>
+
+</body>
+</html>

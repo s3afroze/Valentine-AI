@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<head>
+<script type="text/javascript">
+function message() {
+var s = document.getElementById('item1');
+if (s.value == "upload") {
+    document.forms["files"].submit()
+}}
+
+ function submitForms(){
+    document.forms["files"].submit();
+}
+
+function rere(){
+    document.forms["file-upload-form"].submit();
+}
+
+
+</script>
+</head>
+<!-- This will save handle saving the file to the dataset folder -->
+<form name = "myform" id="upload-form" action="{{ url_for('temporarily_folder') }}" method="POST" enctype="multipart/form-data">
+<div class="input-group mb-3" >
+    <div class="input-group-prepend">
+        <span onclick="myform.submit()" class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+    </div>
+    <div class="custom-file">
+        <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" type="file" name="fileUpload" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" multiple>
+        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+    </div>
+</div>
+</form> 
+<br>
+<br>
+<br>
+<label for="options">Choose template:</label>
+<form name = "files" method="POST" action="{{ url_for('show_example') }}">
+    <!-- Files uploaded by the user -->
+    <select onchange="message()" id = "item1" name = "option" class="custom-select">
+        <option value="" disabled selected>Select your option</option>
+        {% for name in files %}
+            <option value="{{ name }}">{{ name }}</option>
+        {% endfor %}
+        <option class = "stand-out" value ="upload">Write template</option>
+    </select>
+    <br>
+    <br>
+    <br>
+    <button class="input-group-text button">Show an instance</button>
+</div>
+</form>
+
+<br>
+
+{% endblock content %}
+

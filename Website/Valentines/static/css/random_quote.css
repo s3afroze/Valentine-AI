@@ -1,0 +1,56 @@
+body{
+	font-family: 'Roboto', sans-serif;
+	color: #000;
+}
+
+#quote-container{
+	width:100%;
+	margin:5% auto;
+	padding: 5%;
+}
+#quote-container h2{
+	text-align:center;
+	color:white;
+	text-decoration: underline #FFD7E4;
+}
+
+#quoteContainer{
+	color: white;
+	/*padding:5%;*/
+	margin:10% auto;
+	text-align: center;
+  	height:75%;
+}
+#buttonContainer{
+	width: 100%;
+	text-align: center;
+}
+#quoteButton{
+	width:200px;
+	margin-top: 10px;
+	border:2px solid white;
+	color:#FFD7E4;
+	font-family: inherit;
+	font-weight: bold;
+	padding:5px;
+	text-decoration: none;
+	text-align: center;
+}
+
+#quoteButton:hover{
+	cursor:pointer;
+	background:#FFD7E4;
+	color: #fff;	
+}
+#quoteButton:active{
+	cursor: pointer;
+}
+#quoteButton{
+	display: inline-block;
+}
+#quoteGenius{
+	font-style: italic;
+	font-weight: 600;
+	text-align: center;
+}
+
