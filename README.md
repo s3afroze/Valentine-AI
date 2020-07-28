@@ -1,2 +1,2 @@
 # Valentines-AI
-(https://valentine-ai.com/)[website]
+https://valentine-ai.com/
