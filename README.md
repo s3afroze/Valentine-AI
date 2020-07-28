@@ -1,2 +1,2 @@
 # Valentines-AI
-https://valentine-ai.com/
+https://www.valentine-ai.com/
