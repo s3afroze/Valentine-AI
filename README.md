@@ -1,2 +1,2 @@
 # Valentines-AI
-[http://valentine-ai.com/](website)
+[https://valentine-ai.com/](website)
